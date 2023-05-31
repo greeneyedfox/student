@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function showMessage() {
+        let message = "Привет, я JavaScript!"; // локальная переменная
+        alert( message );
+      }
+      
+      showMessage(); // Привет, я JavaScript!
+
+
+      function palindrom(word){
+        alert(word==word.split('').reverse().join('')?"Словопалиндром":"Слово не палиндром")
+      }
+      palindrom("bebeb")
+      
+      
+    function getRandomArbitrary(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+      }
+      
+    function square(arr){
+    	for (let k=0;k<15;k++){
+        if (arr_15[k]<0){
+          arr_15[k] *= arr_15[k];
+        }
+      }
+    }
+        
+    
+ 	let arr_15 = [];
+    for (let i=0;i<15;i++){
+        arr_15.push(getRandomArbitrary(-10, 30))
+      }
+    alert(`Было ${arr_15}`)
+    square(arr_15)
+    alert(`Стало ${arr_15}`)
+	
+    
+    class User{
+    	constructor(name){
+        	this.name = name;
+            }
+            
+        sayHi() {
+        	alert("Привет! Я " + this.name)
+        }
+    }
+    let user1 = new User("Саша");
+    user1.sayHi()
+    
+    
+    class Reverse{
+    	constructor(name){
+        	this.name = name;
+            this.reversed = name.split('').reverse().join('');
+            }
+        
+        show_rev_name() {
+        	alert("Мое имя " + this.name + ", мое имя наоборот " + this.reversed) 
+        }
+    }
+    
+    let myname = new Reverse("Рома");
+    myname.show_rev_name();
+    </script>
+  </body>
+</html>
