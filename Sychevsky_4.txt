@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let user = {
+        name: "Джон",
+        age: 30
+      };
+      user.sayHi = function() {
+        alert("Привет!");
+      };
+
+      //user.sayHi(); // Привет!
+	let customer = {
+    	money:"9999999",
+        age:15,
+        sex:"male",
+        height:200,
+        cart:"big"
+        }
+    alert(`Our customer's wallet contains ${customer.money}, he is ${customer.age}, his cart is ${customer.cart}`);
+
+     let users = {
+     	amount: 2500,
+        mean_age: 29.2,
+        favorite_category: "tasty"
+     };
+
+     let orders = {
+     	pizzas: 200,
+        shampagne: 100,
+        pasta: 1000
+     };
+
+     let restaurants = {
+     	outlets: 10,
+        mean_rating: 4.5,
+        mean_menus: 60
+     };
+
+     alert(users.amount>2000?"Today in our restaurants were crowdy":"Today our restaurants almost empty")
+     alert(orders.pasta==1000?"Seems like we are almost ran out of spaghetti":"We can feed even an army with pasta")
+     alert(restaurants.rating != 5?"We have much to improve":"We are the best")
+     /*
+     function User(name) {
+      this.name = name;
+      this.isAdmin = false;
+    }
+
+    let sasha = new User("Cаша");
+    let misha = new User("Миша");
+    let ivan = new User("Ваня");
+
+
+    alert(`${misha.name}, ${ivan.name}, ${sasha.name}`)
+    */
+
+    function User(name, grade, age) {
+      this.name = name;
+      this.grade = grade;
+      this.age = age;
+
+      this.sayHi = function() {
+        alert( "Меня зовут: " + this.name + " , мне " + this.age + " и я учусь в " + this.grade + " классе");
+      };
+    }
+
+    let nik = new User("Никита", 10, 17);
+    nik.sayHi()
+	let vlad = new User("Влад", 1, 6);
+    vlad.sayHi()
+    </script>
+  </body>
+</html>
