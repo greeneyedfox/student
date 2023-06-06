@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  </head>
+  <body>
+    <p id='fst'></p>
+    <p id='scnd'></p>
+    <p id='thrd'></p>
+    <p id='forth'></p>
+    <p id='fifth'></p>
+    <p id='sixth'></p>
+    <p id='seventh'></p>
+    <p id='eighth'></p>
+
+
+    <script type="text/javascript">
+      let a = 10;
+      let b = 5;
+      let func = (fst, scnd) => fst+scnd;
+      document.getElementById('fst').innerHTML = func(a,b);
+
+
+      let quest = prompt("Когда начнется новый век?");
+      let answer = (quest == "2100" ? ()=> "Верно" : ()=> "Неверно");
+      document.getElementById("scnd").innerHTML = answer();
+
+
+      let surname = "sychevsky";
+      let pali = (surname==surname.split('').reverse().join('')? ()=> "Фамилия палиндром":()=>"Фамилия не палиндром");
+      document.getElementById("thrd").innerHTML = pali();
+
+
+      let arr = [124, 2, 10, 100, 240]
+      document.getElementById('forth').innerHTML = arr.reduce((a, b) => a + b)/arr.length;
+
+
+      let newYear = new Date(2024, 0, 1);
+      let today = new Date();
+      document.getElementById("fifth").innerHTML = "Дней до нового года = " + ((newYear - new Date())/(24*3600*1000))
+
+      let empty = () => {};
+      document.getElementById("sixth").innerHTML = empty();
+
+
+      let sum = arr.reduce((a, b) => a + b);
+      let even = arr.filter(v => v % 2 == 0);
+      let double = arr.map(v => v * 2);
+      document.getElementById("seventh").innerHTML = `Сумма = ${sum}, четные = ${even}, умножение на 2 = ${double}`;
+
+
+	    function validateEmail(email) {
+          var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+          return re.test(String(email).toLowerCase());
+        }
+      let emails = ["r@mail.com", "sfsfa@ya.ru", "lo@12", "ad.ru", "ya.@ewew.rt"]
+      var emfilt = emails.filter(v => validateEmail(v));
+      document.getElementById("eighth").innerHTML = `${emfilt}`;
+
+    </script>
+  </body>
+</html>
